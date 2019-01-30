@@ -1,0 +1,15 @@
+127.0.0.1 - - [30/Jan/2019:13:24:00 +0100] "GET /WebApplication/calculator?operation=sub&n1=8&n2=5 HTTP/1.1" 200 18 http-bio-7777-exec-1 34
+127.0.0.1 - - [30/Jan/2019:13:24:00 +0100] "GET /WebApplication/calculator?operation=add&n1=2&n2=3 HTTP/1.1" 200 18 http-bio-7777-exec-2 1
+127.0.0.1 - - [30/Jan/2019:13:24:00 +0100] "GET /WebApplication/calculator?operation=div&n1=6&n2=0 HTTP/1.1" 400 26 http-bio-7777-exec-3 0
+127.0.0.1 - - [30/Jan/2019:13:24:00 +0100] "GET /WebApplication/calculator?operation=div&n1=6&n2=3 HTTP/1.1" 200 18 http-bio-7777-exec-4 1
+127.0.0.1 - - [30/Jan/2019:13:24:00 +0100] "GET /WebApplication/calculator?operation=mul&n1=8&n2=2 HTTP/1.1" 200 19 http-bio-7777-exec-5 1
+127.0.0.1 - - [30/Jan/2019:13:24:54 +0100] "GET /WebApplication/calculator?operation=sub&n1=8&n2=5 HTTP/1.1" 200 18 http-bio-7777-exec-1 33
+127.0.0.1 - - [30/Jan/2019:13:24:54 +0100] "GET /WebApplication/calculator?operation=add&n1=2&n2=3 HTTP/1.1" 200 18 http-bio-7777-exec-2 1
+127.0.0.1 - - [30/Jan/2019:13:24:54 +0100] "GET /WebApplication/calculator?operation=div&n1=6&n2=0 HTTP/1.1" 400 26 http-bio-7777-exec-3 0
+127.0.0.1 - - [30/Jan/2019:13:24:54 +0100] "GET /WebApplication/calculator?operation=div&n1=6&n2=3 HTTP/1.1" 200 18 http-bio-7777-exec-4 0
+127.0.0.1 - - [30/Jan/2019:13:24:54 +0100] "GET /WebApplication/calculator?operation=mul&n1=8&n2=2 HTTP/1.1" 200 19 http-bio-7777-exec-5 0
+127.0.0.1 - - [30/Jan/2019:13:52:13 +0100] "GET /WebApplication/calculator?operation=sub&n1=8&n2=5 HTTP/1.1" 200 18 http-bio-7777-exec-1 34
+127.0.0.1 - - [30/Jan/2019:13:52:14 +0100] "GET /WebApplication/calculator?operation=add&n1=2&n2=3 HTTP/1.1" 200 18 http-bio-7777-exec-2 0
+127.0.0.1 - - [30/Jan/2019:13:52:14 +0100] "GET /WebApplication/calculator?operation=div&n1=6&n2=0 HTTP/1.1" 400 26 http-bio-7777-exec-3 1
+127.0.0.1 - - [30/Jan/2019:13:52:14 +0100] "GET /WebApplication/calculator?operation=div&n1=6&n2=3 HTTP/1.1" 200 18 http-bio-7777-exec-4 1
+127.0.0.1 - - [30/Jan/2019:13:52:14 +0100] "GET /WebApplication/calculator?operation=mul&n1=8&n2=2 HTTP/1.1" 200 19 http-bio-7777-exec-5 0
