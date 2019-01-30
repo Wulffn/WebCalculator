@@ -67,7 +67,7 @@ public class CalculatorTest {
     @Test
     public void divNumber() {
         int res = calculator.div(32, 8);
-        assertEquals(8, res);
+        assertEquals(4, res);
     }
 
     @Test (expected = ArithmeticException.class)
