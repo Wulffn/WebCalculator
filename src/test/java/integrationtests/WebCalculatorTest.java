@@ -53,6 +53,6 @@ public class WebCalculatorTest {
 
     @Test (expected = ArithmeticException.class)
     public void divNumberArit() throws IOException {
-        String res = client.makeHttpRequest("?operation=div&n1=6&n2=0");
+        client.makeHttpRequest("?operation=div&n1=6&n2=0");
     }
 }
