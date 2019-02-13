@@ -164,7 +164,7 @@
             </build>
         </profile>
         <profile>
-            <id>deployremote</id>
+            <id>remote</id>
             <build>
                 <plugins>
                     <plugin>  
