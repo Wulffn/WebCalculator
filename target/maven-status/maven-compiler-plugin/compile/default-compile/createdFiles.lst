@@ -1,4 +1,5 @@
 calculator/ICalculator.class
+calculator/CalculatorJson.class
 utils/HttpClient.class
 calculator/Calculator.class
 calculator/CalculatorServlet.class
