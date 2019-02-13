@@ -39,7 +39,7 @@ function getId(e) {
 }
 
 function apiCallText(parameters) {
-    var domain = "/calculator?";
+    var domain = "/Webcalculator/calculator?";
     var result = document.getElementById("textResult");
     fetch(domain + parameters)
             .then(res => res.text())
@@ -47,7 +47,7 @@ function apiCallText(parameters) {
 }
 
 function apiCallJson(parameters) {
-    var domain = "/calculatorjson?";
+    var domain = "/Webcalculator/calculatorjson?";
     var result = document.getElementById("jsonResult");
     fetch(domain + parameters)
             .then(res => res.json())
