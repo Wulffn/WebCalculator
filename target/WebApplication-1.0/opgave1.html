@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Start Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+
+    <div id="container">
+        <div id="display" class="t4"></div>
+
+        <div id="buttons">
+            <div class="t1">7</div>
+            <div class="t1">8</div>
+            <div class="t1">9</div>
+            <div class="t1">/</div>
+
+            <div class="t1">4</div>
+            <div class="t1">5</div>
+            <div class="t1">6</div>
+            <div class="t1">*</div>
+
+            <div class="t1">1</div>
+            <div class="t1">2</div>
+            <div class="t1">3</div>
+            <div class="t1">-</div>
+
+            <div class="t1">0</div>
+            <div class="t1">.</div>
+            <div class="t1">+</div>
+            <div id="calculate" class="t1">=</div>
+            <div class="t1">Cleanse</div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('div.t1').click(function () {
+                var div = document.getElementById('display');
+                var text1 = $(this).text();
+                if (text1 === "Cleanse") {
+                    div.innerHTML = "";
+                }
+                else if (text1 === "=") {
+                    var content = div.innerHTML;
+                    content.trim;
+                    var counter = 0;
+                    for (var i = 0; i < content.length;) {
+                        var i1 = 0;
+                        while (i < content.length && !content.charAt(i)
+                            .match(/[^0-9.]/g)) {
+                            i1 += content.charAt(i);
+                            i++;
+                        }
+                        var val = content.charAt(i);
+                        i++;
+                        var i2 = 0;
+                        while (i < content.length && !content.charAt(i)
+                            .match(/[^0-9.]/g)) {
+                            i2 += content.charAt(i);
+                            i++;
+                        }
+                        counter += +i1;
+                        console.log("i1: " + i1);
+                        console.log("i2: " + i2);
+                        console.log("val: " + val);
+                        switch (val) {
+                            case "*":
+                                counter *= +i2;
+                                break;
+                            case "/":
+                                counter /= +i2;
+                                break;
+                            case "-":
+                                counter -= +i2;
+                                break;
+                            case "+":
+                                counter += +i2;
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    counter = counter.toFixed(2);
+                    console.log("Counter: " + counter);
+                    div.innerHTML = counter;
+                }
+                else {
+                    if ((div.innerHTML.endsWith("+")
+                        || div.innerHTML.endsWith("-") || div.innerHTML.endsWith("*")
+                        || div.innerHTML.endsWith("/") || div.innerHTML.endsWith("."))
+                        && text1.match(/[^0-9.]/g)) {
+                        console.log("using two expressions after each other!" + "\n");
+                    }
+                    else
+                        div.innerHTML += text1;
+                }
+            });
+        });
+    </script>
+</body>
+<style>
+    #container {
+        width: 226px;
+        height: 274px;
+        border: 3px solid darkblue;
+        margin: auto
+    }
+
+    .t1,
+    .t4 {
+        border: 1px solid black;
+        height: 48px;
+        margin-left: 3px;
+        margin-top: 3px;
+        display: inline-block;
+        text-align: center;
+        line-height: 48px;
+    }
+
+    .t1 {
+        width: 48px;
+    }
+
+    .t4 {
+        width: 219px;
+    }
+</style>
+<a href="index.html">Back to mainpage</a>
+</html>
