@@ -35,16 +35,16 @@ public class CalculatorJson extends HttpServlet {
                 int n2 = Integer.parseInt(request.getParameter("n2"));
                 switch (opp) {
                     case "add":
-                        res = "{\"n1\" : "+ n1 + ",\"n2\" : "+ n1 + ",\"operation\" : \"add\",\"res\" : "+ calc.add(n1, n2) + "}";
+                        res = "{\"n1\" : "+ n1 + ",\"n2\" : "+ n2 + ",\"operation\" : \"add\",\"res\" : "+ calc.add(n1, n2) + "}";
                         break;
                     case "sub":
-                        res = "{\"n1\" : "+ n1 + ",\"n2\" : "+ n1 + ",\"operation\" : \"sub\",\"res\" : "+ calc.sub(n1, n2) + "}";
+                        res = "{\"n1\" : "+ n1 + ",\"n2\" : "+ n2 + ",\"operation\" : \"sub\",\"res\" : "+ calc.sub(n1, n2) + "}";
                         break;
                     case "mul":
-                        res = "{\"n1\" : "+ n1 + ",\"n2\" : "+ n1 + ",\"operation\" : \"mul\",\"res\" : "+ calc.mul(n1, n2) + "}";
+                        res = "{\"n1\" : "+ n1 + ",\"n2\" : "+ n2 + ",\"operation\" : \"mul\",\"res\" : "+ calc.mul(n1, n2) + "}";
                         break;
                     case "div":
-                        res = "{\"n1\" : "+ n1 + ",\"n2\" : "+ n1 + ",\"operation\" : \"div\",\"res\" : "+ calc.div(n1, n2) + "}";
+                        res = "{\"n1\" : "+ n1 + ",\"n2\" : "+ n2 + ",\"operation\" : \"div\",\"res\" : "+ calc.div(n1, n2) + "}";
                         break;
                     default:
                         throw new InvalidParameterException("Operation not supported");
